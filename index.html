@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolidBuild Construction</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+    header { background:#333; color:#fff; padding:20px; text-align:center; }
+    nav { background:#555; color:#fff; display:flex; justify-content:center; }
+    nav a { color:#fff; padding:14px 20px; text-decoration:none; }
+    nav a:hover { background:#444; }
+    section { padding:20px; }
+    .projects img { width:100%; max-width:300px; margin:10px; border-radius:8px; }
+    footer { background:#333; color:#fff; text-align:center; padding:10px; margin-top:20px; }
+    .lang-toggle { position:absolute; top:20px; right:20px; }
+    button { padding:6px 12px; margin:2px; border:none; border-radius:6px; cursor:pointer; }
+    button:hover { opacity:0.8; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1 data-en="SolidBuild Construction" data-ar="شركة سوليد بيلد للمقاولات">SolidBuild Construction</h1>
+    <div class="lang-toggle">
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('ar')">AR</button>
+    </div>
+  </header>
+  <nav>
+    <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+    <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+    <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+  </nav>
+  <section id="services">
+    <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+    <ul>
+      <li data-en="Residential & Commercial Construction" data-ar="المباني السكنية والتجارية">Residential & Commercial Construction</li>
+      <li data-en="Renovation & Remodeling" data-ar="التجديد وإعادة التصميم">Renovation & Remodeling</li>
+      <li data-en="Project Management" data-ar="إدارة المشاريع">Project Management</li>
+    </ul>
+  </section>
+  <section id="projects" class="projects">
+    <h2 data-en="Recent Projects" data-ar="آخر المشاريع">Recent Projects</h2>
+    <img src="https://via.placeholder.com/300x200.png?text=Project+1" alt="Project 1">
+    <img src="https://via.placeholder.com/300x200.png?text=Project+2" alt="Project 2">
+  </section>
+  <section id="contact">
+    <h2 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+    <p data-en="Phone/WhatsApp: +966500000000" data-ar="الهاتف/واتساب: +966500000000">Phone/WhatsApp: +966500000000</p>
+    <p data-en="Email: info@yourdomain.com" data-ar="البريد الإلكتروني: info@yourdomain.com">Email: info@yourdomain.com</p>
+    <form action="mailto:info@yourdomain.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name"><br><br>
+      <input type="email" name="email" placeholder="Your Email"><br><br>
+      <textarea name="message" placeholder="Your Message"></textarea><br><br>
+      <button type="submit" data-en="Send" data-ar="إرسال">Send</button>
+    </form>
+  </section>
+  <footer>
+    <p data-en="© 2025 SolidBuild Construction - All rights reserved" data-ar="© ٢٠٢٥ شركة سوليد بيلد - جميع الحقوق محفوظة">© 2025 SolidBuild Construction - All rights reserved</p>
+  </footer>
+</body>
+</html>
